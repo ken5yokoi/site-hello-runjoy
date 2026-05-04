@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="{% if title %}{{ title }} | Hello RunJoy{% else %}Hello RunJoy{% endif %}">
+	<meta property="og:description" content="{% if description %}{{ description }}{% else %}ランニングブログです{% endif %}">
+	<title>{% if title %}{{ title }} | Hello RunJoy{% else %}Hello RunJoy{% endif %}</title>
+	<meta name="description" content="{% if description %}{{ description }}{% else %}ランニングブログです{% endif %}">
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="p-header">
+	<div class="l-container">
+		<div class="p-header__inner">
+			<div class="p-header__logo"><a href="/">Hello RunJoy</a></div>
+		</div>
+	</div>
+</header>

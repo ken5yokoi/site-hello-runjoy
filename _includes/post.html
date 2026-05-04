@@ -1,0 +1,51 @@
+{% include "header.html" %}
+
+<div class="l-container">
+	<main class="l-main">
+		<div class="p-article">
+			<!-- 投稿日 -->
+			<p class="p-article__meta">
+				公開日：{{ date | date: "%Y.%m.%d" }}
+			</p>
+			
+			<h1 class="p-article__title">{{ title }}</h1>
+			{% if lead %}
+				<p>{{ lead }}</p>
+			{% endif %}
+			{% if result %}
+				<p class="p-article__result"><b>{{ result }}</b></p>
+			{% endif %}
+			<!-- 導入文（超重要） -->
+			{% if lead %}
+				<!-- <p class="p-article__lead">{{ lead }}</p> -->
+			{% endif %}
+
+			<!-- 目次（後で拡張可能） -->
+			<div class="p-article__toc">
+				<p>この記事でわかること</p>
+				<ul>
+					{% for item in toc %}
+						<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<!-- 本文 -->
+			<article class="p-article__body">
+				{{ content }}
+			</article>
+
+			<!-- CTA（広告・誘導） -->
+			<!-- <div class="p-article__cta">
+				<p>おすすめアイテムはこちら</p>
+				<a href="#" class="p-btn">チェックする</a>
+			</div> -->
+
+			<div class="p-article__return">
+				<a href="/" class="p-btn p-btn--return">サイトトップに戻る</a>
+			</div>
+		</div>
+	</main>
+</div>
+
+{% include "footer.html" %}
