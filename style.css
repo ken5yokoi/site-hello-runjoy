@@ -252,6 +252,37 @@ h1,h2,h3,h4,h5,p {
   text-align: center;
   margin: 80px 0;
 }
+
+/*contact form*/
+.p-contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.p-contactForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.p-contactForm input,
+.p-contactForm textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.p-contactForm button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 /*btn*/
 .p-btn {
   display: inline-block;

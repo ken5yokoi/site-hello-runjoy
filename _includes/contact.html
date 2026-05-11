@@ -1,0 +1,22 @@
+{% include "header.html" %}
+
+<div class="l-container">
+	<main class="l-main">
+		<div class="p-article">
+			<h1 class="p-article__title">{{ title }}</h1>
+			{% if result %}
+				<p class="p-article__result"><b>{{ result }}</b></p>
+			{% endif %}
+			<!-- 本文 -->
+			<article class="p-article__body">
+				{{ content }}
+			</article>
+
+			<div class="p-article__return">
+				<a href="/" class="p-btn p-btn--return">サイトトップに戻る</a>
+			</div>
+		</div>
+	</main>
+</div>
+
+{% include "footer.html" %}
